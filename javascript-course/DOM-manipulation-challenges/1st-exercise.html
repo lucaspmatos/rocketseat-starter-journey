@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>First Exercise</title>
+    </head>
+    <body>
+        <button id="squareCreator">Crie um novo quadrado!</button>
+        <div id="square"></div>
+        <script>
+            var btnElement = document.querySelector('#squareCreator');
+            
+            btnElement.onclick = function() {
+            
+            	var squareElement = document.createElement('div');
+                
+                squareElement.setAttribute('class', 'box');
+            	squareElement.style.width = 100;
+                squareElement.style.height = 100;
+                squareElement.style.marginTop = 10;
+                squareElement.style.marginRight = 10;
+                squareElement.style.backgroundColor = '#f00';
+                squareElement.style.float = 'left';
+                
+                var newSquare = document.querySelector('#square');
+                newSquare.appendChild(squareElement);
+            
+            }
+        </script>
+    </body>
+</html>

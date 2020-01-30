@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Third Exercise</title>
+    </head>
+    <body>
+          <ul></ul>
+        <script>
+            var names = ["Diego", "Gabriel", "Lucas"];
+
+            var nameElement = document.querySelector('ul');
+
+            for(var i = 0; i < names.length; i++) {
+                var listName = document.createElement('li');
+
+                var nameText = document.createTextNode(names[i]);
+
+                listName.appendChild(nameText);
+
+                nameElement.appendChild(listName);
+            }
+        </script>
+    </body>
+</html>

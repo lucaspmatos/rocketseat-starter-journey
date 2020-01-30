@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fourth Exercise</title>
+</head>
+
+<body>
+    <ul></ul>
+
+    <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button>
+
+    <script>
+        var names = ["Diego", "Gabriel", "Lucas"];
+
+        var nameElement = document.querySelector('ul');
+
+        for (var i = 0; i < names.length; i++) {
+            var listName = document.createElement('li');
+
+            var nameText = document.createTextNode(names[i]);
+
+            listName.appendChild(nameText);
+
+            nameElement.appendChild(listName);
+        }
+
+        var inputElement = document.querySelector('input[name=nome]');
+        var btnElement = document.querySelector('button');
+
+        btnElement.onclick = function () {
+
+            var newName = inputElement.value;
+
+            var listName = document.createElement('li');
+
+            var newText = document.createTextNode(newName);
+
+            listName.appendChild(newText);
+
+            nameElement.appendChild(listName);
+
+            inputElement.value = "";
+        }
+
+    </script>
+</body>
+
+</html>
